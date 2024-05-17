@@ -13,6 +13,11 @@ import java.util.ArrayList;
 public class Venta {
     private double valorVenta;
     private ArrayList<Computador> computadoras; 
+
+    public Venta(ArrayList<Computador> c) {
+        computadoras = c;
+    }
+    
     
     public void establecerValorVenta(double v){
         valorVenta = v;
@@ -32,5 +37,11 @@ public class Venta {
     
     public ArrayList<Computador>obtenerComputadoras(){
         return computadoras;
+    }
+    
+    @Override
+    public String toString() {
+        String cadena = String.format("Valor de la venta: %s\n", valorVenta);
+        return cadena;
     }
 }

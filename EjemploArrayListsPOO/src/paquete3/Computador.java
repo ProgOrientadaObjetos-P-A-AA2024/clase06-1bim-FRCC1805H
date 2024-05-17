@@ -12,7 +12,13 @@ public class Computador {
    private Memoria memoria;
    private double costoComputador;
    
-   public void establecerMarca(String m){
+    public Computador(String mc, Procesador p,Memoria m){
+        marca = mc;
+        procesador = p;
+        memoria = m;
+    }
+    
+    public void establecerMarca(String m){
        marca = m;
     }
    
@@ -42,5 +48,18 @@ public class Computador {
     
     public double obtenerCostoComputador(){
         return costoComputador;
+    }
+    
+    @Override
+    public String toString() {
+        String cadena = String.format("Marca Computadora: %s\n"
+                + "Marca Memoria: %s\nMarca Procesador: %s\nCosto Memoria: %.2f"
+                + "\nCosto Procesador: %.2f\nCosto Computador: %.2f\n"
+                ,obtenerMarca(),obtenerMemoria().obtenerMarca()
+                ,obtenerProcesador().obtenerMarca()
+                ,obtenerMemoria().obtenerCosto()
+                ,obtenerProcesador().obtenerCosto()
+                ,obtenerCostoComputador());
+        return cadena;
     }
 }
