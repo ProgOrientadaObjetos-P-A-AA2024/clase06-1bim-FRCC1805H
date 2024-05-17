@@ -62,7 +62,6 @@ public class Ejecutor {
             cadena2 = String.format("%s\n", V4);
 
         }
-        
         System.out.printf(" %s - %s \n", cadena1, cadena2);
     }
 
