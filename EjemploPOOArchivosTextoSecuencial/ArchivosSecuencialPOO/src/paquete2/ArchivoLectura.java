@@ -52,15 +52,17 @@ public class ArchivoLectura {
     public String obtenerRutaArchivo() {
         return rutaArchivo;
     }
-
+    // mediante este while crea los archivos txt de profesor para asi obtener los
+    // valorres y poder presentar las variables de los profesores que esta en los 
+    // archivos txt. 
     // establecer valores de cada línea
     // en la lista de tipo Profesor
     public void establecerLista() {
         lista = new ArrayList<>();
         File f = new File(rutaArchivo);
-
+         
         if (f.exists()) {
-
+            
             while (entrada.hasNext()) {
                 String linea = entrada.nextLine(); // Tara Hernandez;contratado
 

@@ -8,7 +8,8 @@ package paquete2;
 import paquete1.Profesor;
 
 public class Ejecutor {
-
+    // presenta los valores de los archivos 
+    
     public static void main(String[] args) {
 
         // nombre del archivo

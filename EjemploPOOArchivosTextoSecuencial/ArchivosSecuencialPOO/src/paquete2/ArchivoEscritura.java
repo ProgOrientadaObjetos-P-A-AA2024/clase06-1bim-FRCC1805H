@@ -51,7 +51,8 @@ public class ArchivoEscritura {
     public Profesor obtenerRegistro() {
         return registro;
     }
-
+    // se estrae los valores de el archivo txt para poder presentar en ejcutor 
+    // mediante un arryst
     // agrega registros al archivo
     public void establecerSalida() {
         try {

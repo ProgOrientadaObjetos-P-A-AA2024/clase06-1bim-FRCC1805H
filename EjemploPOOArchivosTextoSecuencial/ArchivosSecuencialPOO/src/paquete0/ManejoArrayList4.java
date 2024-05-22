@@ -25,6 +25,8 @@ public class ManejoArrayList4 {
                 
                 ) // ["Tara Hernandez", "contratado"]
         );
+        String valor1 = linea_partes.get(0);
+        String valor2 = linea_partes.get(1);
         Profesor p = new Profesor(linea_partes.get(0), // Tara Hernandez
                 linea_partes.get(1)); // contratado;
 
