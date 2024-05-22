@@ -77,7 +77,9 @@ public class ArchivoLectura {
                 double nota = Double.parseDouble(linea_partes.
                         get(1).replace(",", "."));
                 String profesor = linea_partes.get(2);
-
+                // mediante dos bac eslas algo diferen del punto y como 
+                //  o de la coma  
+                // 
                 ArrayList<String> cadenaProfesor = new ArrayList<>(
                         Arrays.asList(profesor.split("\\|")));
                 // ["Tara Hernandez", "contratado"]
