@@ -4,11 +4,14 @@
  */
 package paquete4;
 
-import java.io.FileWriter;
-import java.util.Formatter;
+import java.io.*;
+import java.util.*;
 
+/**
+ *
+ * @author StarMedia
+ */
 public class ArchivoEscritura {
-  
 
     private String nombreArchivo;
     private String rutaArchivo;
@@ -19,10 +22,9 @@ public class ArchivoEscritura {
         nombreArchivo = n;
         rutaArchivo = String.format("data/%s",
                 nombreArchivo);
-        
+
     }
 
-    
     public void establecerNombreArchivo(String n) {
         nombreArchivo = n;
     }
@@ -52,11 +54,10 @@ public class ArchivoEscritura {
     public void establecerSalida() {
         try {
             salidaArchivo = new Formatter(new FileWriter(rutaArchivo, true));
-            Empresa c1 = obtenerRegistro();
-            String cadenaRegistro = String.format("% s ; %s",
-                   c1.obtenerNombre(),
-                    c1.obtenerCiudad()
-                    );
+            Empresa e = obtenerRegistro();
+            String cadenaRegistro = String.format("%s;%s",
+                    e.obtenerNombre(), e.obtenerCiudad()
+            );
             salidaArchivo.format("%s\n", cadenaRegistro);
             salidaArchivo.close();
         } catch (Exception e) {
@@ -74,4 +75,3 @@ public class ArchivoEscritura {
 
     }
 }
-

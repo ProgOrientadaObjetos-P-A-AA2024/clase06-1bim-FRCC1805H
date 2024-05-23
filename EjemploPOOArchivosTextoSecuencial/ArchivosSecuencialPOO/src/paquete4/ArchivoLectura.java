@@ -3,16 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package paquete4;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
-
-
-
+/**
+ *
+ * @author StarMedia
+ */
 public class ArchivoLectura {
-
-   private Scanner entrada;
+    private Scanner entrada;
     private String nombreArchivo;
     private String rutaArchivo;
     private ArrayList<Empresa> lista;
